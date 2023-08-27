@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Idyll</title>
+    <meta property="og:title" content="Idyll Project" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="article" />
+
+
+    <link rel="stylesheet" href="static/idyll_styles.css" />
+  </head>
+  <body>
+    <div id="idyll-mount"><div data-reactroot=""><div class="idyll-root"><div class=" idyll-text-container"><div class="article-header"><h1 class="hed">personalised learning model</h1><div class="idyll-pub-date">2023-08-25</div></div><em>Were all apes dancing to the tune of fat-tailed distributions</em><h1 id="personalised-learning-model">Personalised learning model</h1><h3 id="initial-objectives:">Initial objectives:</h3><p>- If they do, lets optimise &amp; gamify learning process
+		1. Keep track of problems/learning lessions (clustered on the basis of mini topics)
+		2. Reduce time/effort per learned topic by spaced repetitions via learning model (more frequency problems/topics with low accuracy or recall and reduced repeition for learned problems/topics)
+	- If they dont but need to, lets gamify the whole process with personalised computer agents to keep track of learning goals/ optimise practice sessions
+	- If they dont and dont need to: Skip</p><h3 id="learning-model">Learning model</h3><p>- remembering param p:
+		* delta: time passed since practised
+		* h: time it takes for your memory strength to reduce by half
+	
+	- half-time param h
+		* h = 2^(theta * x)</p><p>$$ p = 2^{-\Delta/h} $$</p><p>$$ h = 2^{\Theta.x} $$</p><p>$$ L(⟨p,\Delta,x⟩;\Theta)=(p−2^{\frac{-Δ}{2^{Θ⋅x}}})^2+α(−\frac{Δ}{log2(p)}−2^{Θ⋅x})^2+λ||Θ||_2^2 $$</p></div></div></div></div>
+    <script src="static/idyll_index.js"></script>
+  </body>
+</html>

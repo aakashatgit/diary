@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Idyll</title>
+    <meta property="og:title" content="Idyll Project" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="article" />
+
+
+    <link rel="stylesheet" href="static/idyll_styles.css" />
+  </head>
+  <body>
+    <div id="idyll-mount"><div data-reactroot=""><div class="idyll-root"><div class=" idyll-text-container"><div class="article-header"><h1 class="hed">Portfolio Optimisation</h1><div class="idyll-pub-date">2021-11-16</div></div><h1 id="portfolio-construction">Portfolio construction</h1><h2 id="portfolio-weights">Portfolio weights</h2><p>$w= \begin{bmatrix}w<em>1 <!-- -->\<!-- -->\<!-- -->w</em>2\\..\\w<em>n <!-- -->\<!-- -->end{bmatrix}$
+## Expected returns
+$<!-- -->\<!-- -->mu =<!-- -->\<!-- -->begin{bmatrix}<!-- -->\<!-- -->mu</em>1\\\mu<em>2<!-- -->\<!-- -->\<!-- -->..<!-- -->\<!-- -->\<!-- -->\<!-- -->mu</em>n \end{bmatrix}$
+## Covariance Matrix
+$\Sigma = \begin{bmatrix}
+cov(\mu<em>1<!-- -->,<!-- -->\<!-- -->mu</em>1)&amp; cov(\mu<em>1<!-- -->,<!-- -->\<!-- -->mu</em>2)&amp;cov(u<em>1<!-- -->,<!-- -->\<!-- -->mu</em>3)..&amp;cov(\mu<em>1<!-- -->,<!-- -->\<!-- -->mu</em>n)\\.\\.\\
+(\mu<em>n,<!-- -->\<!-- -->mu</em>1)&amp;cov(u<em>n,<!-- -->\<!-- -->mu</em>2)&amp;cov(u<em>n,<!-- -->\<!-- -->mu</em>3)..&amp;cov(\mu<em>n,<!-- -->\<!-- -->mu</em>n)\end{bmatrix}$</p><h2 id="portfolio">Portfolio</h2><ol><li>Portolio return:</li></ol><ul><li>$<!-- -->\<!-- -->mu=w<em>1<!-- -->\<!-- -->mu</em>1 <!-- -->+ w<em>2<!-- -->\<!-- -->mu</em>2 <!-- -->+.. w<em>n<!-- -->\<!-- -->mu</em>n$</li></ul><p>     $=\mu.w^T$</p><ol><li>Portfolio variance:</li></ol><ul><li>$<!-- -->\<!-- -->sigma = <!-- -->\<!-- -->sigma<em>1<!-- -->^<!-- -->2<!-- -->w</em>1<!-- -->^<!-- -->2 <!-- -->+<!-- -->\<!-- -->sigma<em>2<!-- -->^<!-- -->2<!-- -->w</em>2<!-- -->^<!-- -->2<!-- -->... +<!-- -->\<!-- -->sigma<em>n^<!-- -->2<!-- -->w</em>n^<!-- -->2  <!-- -->+<!-- -->2<!-- -->\<!-- -->sigma<em>{<!-- -->1<!-- -->2<!-- -->}w</em>1<!-- -->w<em>2 <!-- -->+<!-- -->2<!-- -->\<!-- -->sigma</em>{<!-- -->2<!-- -->3<!-- -->}w<em>3<!-- -->w</em>3 <!-- -->+ ....<!-- -->2<!-- -->\<!-- -->sigma<em>{nn-<!-- -->1<!-- -->}w</em>nw<!-- -->_<!-- -->{n-<!-- -->1<!-- -->}$ =$w.<!-- -->\<!-- -->Sigma.w^T$</li></ul><h2 id="optimisation">Optimisation</h2><h3 id="minimum-variance-portfolio">Minimum variance portfolio</h3><ul><li>$<!-- -->\<!-- -->argmin w.<!-- -->\<!-- -->Sigma.w^T$</li></ul><ul><li>s.t. $w^{T}<!-- -->1<!-- -->=<!-- -->1<!-- -->$</li></ul><p>
+$\Longrightarrow L(w,\lambda)= w.\Sigma.w^T + \lambda(w^{T}1-1)$
+&lt;br&gt;&lt;br&gt;
+$\Longrightarrow \frac{\partial L}{\partial w}= w^T(\Sigma+ \Sigma^T) +\lambda 1^T$
+&lt;br&gt;
+$\Longrightarrow \frac{\partial L}{\partial \lambda}=w^T1−1$
+&lt;br&gt;&lt;br&gt;
+$\frac{\partial L}{\partial w}=0 \Longrightarrow w^T(\Sigma+ \Sigma^T) +\lambda 1^T=0$ &lt;br&gt;
+$\Longrightarrow w^T =-\frac12\lambda 1^T \Sigma^{-1}\longrightarrow w =-\frac12\lambda 1\Sigma^{-1}$
+&lt;br&gt;
+$w^T1=1 \longrightarrow (-\frac12\lambda \Sigma^{-1} 1^T)1=1$ &lt;br&gt;
+$\lambda=\frac{-2}{1^T\Sigma^{-1}1}$&lt;br&gt;&lt;br&gt;</p><p>$w=\frac{-1}{2}\frac{-2}{1^T\Sigma^{-1}1}\Sigma^{-1}=\frac{\Sigma^{-1}}{1^T\Sigma^{-1}1}$</p><h2 id="chebyshevs-inequality">Chebyshevs Inequality</h2><p>$Pr(|X-\mu|\ge k\sigma)\le\frac1{k^2}$&lt;br&gt;
+$Pr(|X-\mu|\ge a)\le\frac{\sigma^2}{k^2{a^2}}$&lt;br&gt;
+if k=$\frac\mu\sigma$ then, $Pr(|X-\mu|\ge\mu)\le\frac{\sigma^2}{\mu^2}$&lt;br&gt;
+$$</p></div></div></div></div>
+    <script src="static/idyll_index.js"></script>
+  </body>
+</html>
